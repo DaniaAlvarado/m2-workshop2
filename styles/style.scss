@@ -86,7 +86,6 @@ body {
     }
 
     &__lateral {
-        display: none;
         position: fixed;
         flex-direction: column;
         width: 70%;
@@ -96,6 +95,10 @@ body {
         right: 0;
         bottom: 0;
         gap: 50px;
+
+        &-hidden {
+            display: none;
+        }
 
         div {
             display: flex;
@@ -138,8 +141,27 @@ body {
             }
         }
 
+        section {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100px;
+            gap: 25px;
+            align-items: center;
+            padding-top: 40px;
+
+        }
+
     }
 
+}
+
+.login__mobile {
+    @include buttons('false');
+}
+
+.register__mobile {
+    @include buttons('true');
 }
 
 .main {
@@ -204,6 +226,14 @@ body {
 
     &__mobile {
         display: none;
+    }
+}
+
+@media (min-width:975px) {
+    .header {
+        &__lateral {
+            display: none;
+        }
     }
 }
 

@@ -5,7 +5,7 @@
   box-sizing: content-box;
 }
 
-body, .main__left button, .main__left, .header__lateral nav select, .header nav div a, .header nav div select, .header__register, .header__login, .header {
+body, .main__left button, .main__left, .register__mobile, .login__mobile, .header__lateral nav select, .header nav div a, .header nav div select, .header__register, .header__login, .header {
   font-family: "Epilogue";
   font-size: 18px;
 }
@@ -73,7 +73,6 @@ body, .main__left button, .main__left, .header__lateral nav select, .header nav 
   color: hsl(0deg, 0%, 8%);
 }
 .header__lateral {
-  display: none;
   position: fixed;
   flex-direction: column;
   width: 70%;
@@ -83,6 +82,9 @@ body, .main__left button, .main__left, .header__lateral nav select, .header nav 
   right: 0;
   bottom: 0;
   gap: 50px;
+}
+.header__lateral-hidden {
+  display: none;
 }
 .header__lateral div {
   display: flex;
@@ -116,6 +118,41 @@ body, .main__left button, .main__left, .header__lateral nav select, .header nav 
 }
 .header__lateral nav a:hover {
   color: hsl(0deg, 0%, 8%);
+}
+.header__lateral section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100px;
+  gap: 25px;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.login__mobile {
+  color: hsl(0deg, 0%, 41%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.login__mobile:hover {
+  color: black;
+}
+
+.register__mobile {
+  color: hsl(0deg, 0%, 41%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid hsl(0deg, 0%, 41%);
+  border-radius: 20px;
+  padding: 3px 9px;
+}
+.register__mobile:hover {
+  color: black;
+}
+.register__mobile:hover {
+  border: 1px solid hsl(0deg, 0%, 8%);
 }
 
 .main {
@@ -169,6 +206,11 @@ body, .main__left button, .main__left, .header__lateral nav select, .header nav 
   display: none;
 }
 
+@media (min-width: 975px) {
+  .header__lateral {
+    display: none;
+  }
+}
 @media (max-width: 975px) {
   .header {
     padding: 10px 0px;
