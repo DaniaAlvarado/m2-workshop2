@@ -6,8 +6,12 @@
     box-sizing: content-box;
 }
 
-
 $white: hsl(0, 0%, 98%);
 $gray: hsl(0, 0%, 41%);
 $black: hsl(0, 0%, 8%);
+$font__family: 'Epilogue';
 $font__size: 18px;
+
+@mixin paddings ($size) {
+    padding: $size*1px $size*3px;
+}

@@ -1,1 +1,117 @@
 @import 'universal';
+
+body {
+    font-family: $font__family;
+    font-size: $font__size;
+}
+
+@mixin buttons($border) {
+    @extend body;
+    color: $gray;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+        color: black;
+    }
+
+    @if($border=='true') {
+        border: 1px solid $gray;
+        border-radius: 20px;
+        @include paddings(3);
+
+        &:hover {
+            border: 1px solid $black;
+        }
+    }
+}
+
+.header {
+    @extend body;
+    display: flex;
+    width: 100vw;
+
+    &__menu {
+        display: none;
+    }
+
+    &__login {
+        @include buttons('false');
+    }
+
+    &__register {
+        @include buttons('true');
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include paddings(20);
+
+
+        div {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+
+            select {
+                @extend body;
+                color: $gray;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+
+                &:hover {
+                    color: $black;
+                }
+
+                option {
+                    background-color: $white;
+                }
+            }
+
+            a {
+                @extend body;
+                color: $gray;
+                text-decoration: none;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:975px) {
+    .header {
+        &__login {
+            display: none;
+        }
+
+        &__register {
+            display: none;
+        }
+
+        &__menu {
+            display: flex;
+            cursor: pointer;
+        }
+
+        nav {
+            div {
+                select {
+                    display: none;
+                }
+
+                a {
+                    display: none;
+                }
+            }
+        }
+    }
+}

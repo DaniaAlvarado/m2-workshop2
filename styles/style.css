@@ -5,4 +5,91 @@
   box-sizing: content-box;
 }
 
+body, .header nav div a, .header nav div select, .header__register, .header__login, .header {
+  font-family: "Epilogue";
+  font-size: 18px;
+}
+
+.header {
+  display: flex;
+  width: 100vw;
+}
+.header__menu {
+  display: none;
+}
+.header__login {
+  color: hsl(0deg, 0%, 41%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.header__login:hover {
+  color: black;
+}
+.header__register {
+  color: hsl(0deg, 0%, 41%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid hsl(0deg, 0%, 41%);
+  border-radius: 20px;
+  padding: 3px 9px;
+}
+.header__register:hover {
+  color: black;
+}
+.header__register:hover {
+  border: 1px solid hsl(0deg, 0%, 8%);
+}
+.header nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+.header nav div {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.header nav div select {
+  color: hsl(0deg, 0%, 41%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.header nav div select:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+.header nav div select option {
+  background-color: hsl(0deg, 0%, 98%);
+}
+.header nav div a {
+  color: hsl(0deg, 0%, 41%);
+  text-decoration: none;
+}
+.header nav div a:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+
+@media (max-width: 975px) {
+  .header__login {
+    display: none;
+  }
+  .header__register {
+    display: none;
+  }
+  .header__menu {
+    display: flex;
+    cursor: pointer;
+  }
+  .header nav div select {
+    display: none;
+  }
+  .header nav div a {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
