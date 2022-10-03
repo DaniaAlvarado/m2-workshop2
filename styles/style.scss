@@ -72,7 +72,7 @@ body {
                     background-color: $white;
                 }
             }
-            
+
             a {
                 @extend body;
                 color: $gray;
@@ -85,28 +85,87 @@ body {
         }
     }
 
+    &__lateral {
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        background-color: $white;
+        z-index: 1;
+        right: 0;
+        bottom: 0;
+        gap: 50px;
+
+        div {
+            display: flex;
+            width: 100%;
+            justify-content: end;
+        }
+
+        img {
+            padding: 10px 20px 0 0;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            gap: 20px;
+
+            select {
+                @extend body;
+                background-color: transparent;
+                color: $gray;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+
+            a {
+                color: $gray;
+                text-decoration: none;
+                padding-left: 5px;
+
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+
+    }
+
 }
 
-.main{
+.main {
     display: flex;
     @include paddings(35);
     width: 100%;
     gap: 100px;
-    &__left{
+
+    &__left {
         @extend body;
         display: flex;
         flex-direction: column;
         width: 40%;
         gap: 40px;
-        h1{
+
+        h1 {
             padding-top: 100px;
             font-size: 70px;
         }
-        p{
+
+        p {
             color: $gray;
             line-height: 30px;
         }
-        button{
+
+        button {
             @extend body;
             width: 150px;
             padding: 10px;
@@ -114,36 +173,44 @@ body {
             background-color: $black;
             color: $white;
             cursor: pointer;
-            &:hover{
+
+            &:hover {
                 background-color: $white;
                 color: $black;
             }
         }
-        section{
+
+        section {
             display: flex;
             gap: 40px;
             padding-top: 40px;
-            img{
+
+            img {
                 height: 20px;
             }
         }
     }
-    &__right{
+
+    &__right {
         width: 40%;
-        figure{
-            img{
+
+        figure {
+            img {
                 width: 80%;
                 height: 70%;
             }
         }
     }
-    &__mobile{
+
+    &__mobile {
         display: none;
     }
 }
 
 @media (max-width:975px) {
     .header {
+        padding: 10px 0px;
+
         &__login {
             display: none;
         }
@@ -158,6 +225,8 @@ body {
         }
 
         nav {
+            padding: 10px;
+
             div {
                 select {
                     display: none;
@@ -169,45 +238,56 @@ body {
             }
         }
     }
-    .main{
+
+    .main {
         padding: 0;
         width: 100%;
         display: flex;
         flex-direction: column-reverse;
-        &__right{
+
+        &__right {
             width: 100%;
-            figure img{
+
+            figure img {
                 width: 100%;
             }
         }
-        &__left{
+
+        &__left {
             width: 100%;
             justify-content: center;
-            h1{
+
+            h1 {
                 text-align: center;
                 font-size: 40px;
                 padding-top: 10px;
-                br{
+
+                br {
                     display: none;
                 }
             }
-            p{
+
+            p {
                 text-align: center;
             }
-            button{
+
+            button {
                 display: flex;
                 margin: 0 auto;
                 justify-content: center;
             }
-            section{
+
+            section {
                 gap: 30px;
                 justify-content: center;
             }
         }
-        &__mobile{
+
+        &__mobile {
             display: flex;
         }
-        &__desktop{
+
+        &__desktop {
             display: none;
         }
     }
