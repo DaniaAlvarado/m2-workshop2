@@ -27,10 +27,14 @@ body {
     }
 }
 
+
+
 .header {
     @extend body;
     display: flex;
     width: 100vw;
+
+
 
     &__menu {
         display: none;
@@ -56,6 +60,8 @@ body {
             display: flex;
             gap: 50px;
             align-items: center;
+
+
 
             select {
                 @extend body;
@@ -156,6 +162,7 @@ body {
 
 }
 
+
 .login__mobile {
     @include buttons('false');
 }
@@ -204,8 +211,10 @@ body {
 
         section {
             display: flex;
+            flex-wrap: wrap;
             gap: 40px;
             padding-top: 40px;
+            padding-bottom: 40px;
 
             img {
                 height: 20px;
@@ -304,6 +313,7 @@ body {
             button {
                 display: flex;
                 margin: 0 auto;
+                border: 1px solid $black;
                 justify-content: center;
             }
 

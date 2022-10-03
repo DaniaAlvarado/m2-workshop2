@@ -189,8 +189,10 @@ body, .main__left button, .main__left, .register__mobile, .login__mobile, .heade
 }
 .main__left section {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
   padding-top: 40px;
+  padding-bottom: 40px;
 }
 .main__left section img {
   height: 20px;
@@ -264,6 +266,7 @@ body, .main__left button, .main__left, .register__mobile, .login__mobile, .heade
   .main__left button {
     display: flex;
     margin: 0 auto;
+    border: 1px solid hsl(0deg, 0%, 8%);
     justify-content: center;
   }
   .main__left section {
